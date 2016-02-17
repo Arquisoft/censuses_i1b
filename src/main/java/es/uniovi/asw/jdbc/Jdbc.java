@@ -3,7 +3,10 @@ package es.uniovi.asw.jdbc;
 import java.sql.*;
 
 /**
+ * Clase de utilidad para el acceso a la base de datos
  * Created by Chamadoira on 15/02/2016.
+ *
+ * @author UO236953
  */
 public class Jdbc {
     private static String DRIVER = "org.hsqldb.jdbcDriver";
@@ -35,15 +38,15 @@ public class Jdbc {
     }
 
     protected static void close(ResultSet rs) {
-        if (rs != null) try { rs.close(); } catch(SQLException e) {};
+        if (rs != null) try { rs.close(); } catch(SQLException e) {}
     }
 
     public static void close(Statement st) {
-        if (st != null ) try { st.close(); } catch(SQLException e) {};
+        if (st != null ) try { st.close(); } catch(SQLException e) {}
     }
 
     public static void close(Connection c) {
-        if (c != null) try { c.close(); } catch(SQLException e) {};
+        if (c != null) try { c.close(); } catch(SQLException e) {}
     }
 
     public static Connection createThreadConnection() throws SQLException {
