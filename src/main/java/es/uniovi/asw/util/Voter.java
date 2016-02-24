@@ -5,10 +5,9 @@ package es.uniovi.asw.util;
  * @author UO236953
  */
 public class Voter {
-    private String name, dni, email, pass;
-    private int stationCode;
+    private String name, dni, email, stationCode, pass;
 
-    public Voter(String name, String dni, String email, int stationCode, String pass) {
+    public Voter(String name, String dni, String email, String stationCode, String pass) {
         this.name = name;
         this.dni = dni;
         this.email = email;
@@ -28,11 +27,17 @@ public class Voter {
         return email;
     }
 
-    public int getStationCode() {
+    public String getStationCode() {
         return stationCode;
     }
 
     public String getPass() {
         return pass;
+    }
+
+    @Override
+    public String toString(){
+        return "Name: "+getName()+", DNI: "+getDni()+", e-mail: "+getEmail()+", Poll Station Code: "+getStationCode()+
+                ", Pass: "+getPass();
     }
 }

@@ -1,22 +1,28 @@
 package es.uniovi.asw;
 
-import java.util.logging.Logger;
+import es.uniovi.asw.parser.Reader;
+import es.uniovi.asw.util.Voter;
+
+import java.io.IOException;
+import java.util.List;
 
 /**
  * Main application
- * 
+ * @author UO236953
  * @author Labra
  *
  */
 public class LoadUsers {
 
 	public static void main(String... args) {
-		LoadUsers runner = new LoadUsers();
-		runner.run(args);
-	}
-
-	// TODO
-	void run(String... args) {
-		System.out.println("TODO");
+		Reader lector = Reader.getInstanceXlsx();
+		try {
+			List<Voter> voters= lector.read(args[0]);
+			for(Voter v : voters){
+				System.out.println(v.toString());
+			}
+		}catch(IOException e){
+			System.out.println("The file '"+args[0]+"' was not found");
+		}
 	}
 }
