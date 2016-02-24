@@ -37,7 +37,6 @@ public class Voter {
 
     @Override
     public String toString(){
-        return "Name: "+getName()+", DNI: "+getDni()+", e-mail: "+getEmail()+", Poll Station Code: "+getStationCode()+
-                ", Pass: "+getPass();
+        return "Name: "+getName()+", DNI: "+getDni()+", e-mail: "+getEmail()+", Poll Station Code: "+getStationCode();
     }
 }
