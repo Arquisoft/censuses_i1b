@@ -1,5 +1,6 @@
 package es.uniovi.asw;
 
+import es.uniovi.asw.dbupdate.InsertDB;
 import es.uniovi.asw.parser.Reader;
 import es.uniovi.asw.util.Voter;
 
@@ -21,6 +22,7 @@ public class LoadUsers {
 			for(Voter v : voters){
 				System.out.println(v.toString());
 			}
+			InsertDB.insert(voters);
 		}catch(IOException e){
 			System.out.println("The file '"+args[0]+"' was not found");
 		}
