@@ -9,8 +9,8 @@ import java.sql.*;
  * @author UO236953
  */
 public class Jdbc {
-    private static String DRIVER = "org.hsqldb.jdbcDriver";
-    private static String URL = "jdbc:hsqldb:hsql://localhost";
+    private static String DRIVER = "org.sqlite.JDBC";
+    private static String URL = "jdbc:sqlite:voters.db";
     private static String USER = "sa";
     private static String PASS = "";
 

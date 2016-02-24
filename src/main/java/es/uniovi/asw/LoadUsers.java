@@ -1,6 +1,6 @@
 package es.uniovi.asw;
 
-import es.uniovi.asw.dbupdate.InsertDB;
+import es.uniovi.asw.jdbc.InsertDB;
 import es.uniovi.asw.parser.Reader;
 import es.uniovi.asw.util.Voter;
 

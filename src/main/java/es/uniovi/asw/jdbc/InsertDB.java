@@ -1,4 +1,4 @@
-package es.uniovi.asw.dbupdate;
+package es.uniovi.asw.jdbc;
 
 import es.uniovi.asw.jdbc.Jdbc;
 import es.uniovi.asw.util.Voter;
