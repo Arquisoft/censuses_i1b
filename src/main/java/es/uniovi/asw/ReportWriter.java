@@ -8,10 +8,10 @@ import java.io.PrintWriter;
  * Created by Chamadoria on 24/02/2016.
  * @author UO236953
  */
-public class ReportWritter {
+public class ReportWriter {
     private StringBuffer sb;
 
-    public ReportWritter(){
+    public ReportWriter(){
         sb = new StringBuffer();
     }
 
@@ -20,7 +20,7 @@ public class ReportWritter {
     }
 
     public void clean(){
-        sb.delete(0,sb.length()-1);
+        sb=new StringBuffer();
     }
     public void print(){
         System.out.println(sb);
@@ -33,5 +33,9 @@ public class ReportWritter {
         }catch (FileNotFoundException e1) {
                 e1.printStackTrace();
         }
+    }
+    @Override
+    public String toString(){
+        return sb.toString();
     }
 }

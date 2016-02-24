@@ -22,18 +22,12 @@ public class XSSFReaderTest {
             List<Voter> voters= reader.read(file);
 
             Voter a = voters.get(0);
-            assertEquals(a.getName(),"Alberto");
-            assertEquals(a.getDni(),"1111H");
-            assertEquals(a.getEmail(),"alberto@gmail.com");
-            assertEquals(a.getStationCode(),"A");
-            System.out.println(a);
+            assertEquals(a.toString(),"Name: Alberto, DNI: 1111H, e-mail: alberto@gmail.com, Poll Station Code: A");
+            System.out.println("Alberto's pass: "+a.getPass());
 
             Voter b =voters.get(1);
-            assertEquals(b.getName(),"Fernando");
-            assertEquals(b.getDni(),"22222J");
-            assertEquals(b.getEmail(),"fernando@outlook.com");
-            assertEquals(b.getStationCode(),"B");
-            System.out.println(b);
+            assertEquals(b.toString(),"Name: Fernando, DNI: 22222J, e-mail: fernando@outlook.com, Poll Station Code: B");
+            System.out.println("Fernando's pass: "+b.getPass());
         }catch(IOException e){
             System.out.println("The file '"+file+"' was not found");
         }
