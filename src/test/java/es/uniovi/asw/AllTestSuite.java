@@ -1,5 +1,7 @@
 package es.uniovi.asw;
 
+import es.uniovi.asw.jdbc.InsertDBTest;
+import es.uniovi.asw.parser.XSSFReaderTest;
 import org.apache.poi.xssf.eventusermodel.XSSFReader;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
@@ -9,5 +11,5 @@ import org.junit.runners.Suite;
  * @author UO236953
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({ XSSFReader.class, ReportWriter.class} )
+@Suite.SuiteClasses({ XSSFReaderTest.class, ReportWriterTest.class, InsertDBTest.class} )
 public final class AllTestSuite {}

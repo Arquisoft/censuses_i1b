@@ -16,8 +16,8 @@ import static org.junit.Assert.assertEquals;
  * @author uo237633
  */
 public class InsertDBTest {
-    //String file=".\\src\\test\\java\\es\\uniovi\\asw\\jdbc\\votersXSSFReaderTest.xlsx";
-    String file="./src/test/java/es/uniovi/asw/jdbc/votersXSSFReaderTest.xlsx";
+    String file=".\\src\\test\\java\\es\\uniovi\\asw\\jdbc\\votersXSSFReaderTest.xlsx";
+    //String file="./src/test/java/es/uniovi/asw/jdbc/votersXSSFReaderTest.xlsx";
     @Test
     public void read() {
         Reader reader = Reader.getInstanceXlsx();
@@ -47,7 +47,6 @@ public class InsertDBTest {
                 assertEquals(v2.getDni(), v.getDni());
                 assertEquals(v2.getName(), v.getName());
                 assertEquals(v2.getEmail(), v.getEmail());
-                assertEquals(v2.getPass(), v.getPass());
                 assertEquals(v2.getStationCode(), v.getStationCode());
 
             } catch (SQLException e) {
